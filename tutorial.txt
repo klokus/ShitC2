@@ -1,0 +1,27 @@
+Commands example:
+adduser <username> <admin>(True/False) <max_time> <cooldown> <duration>
+duration is the amount of time the user has access.
+It can be specified like:
+[h, d, m, y]
+h = hour
+d = day
+m = month
+y = year
+
+you just put the number in front of the character like: 3y / 1h / 30d / 1m etc
+
+
+(broken) extenduser <username> <duration> (duration is specified like above)
+
+Method creation:
+To add/create a new method for the CNC, you open the file specified in the config.ini and add lines like this
+<method_name> <method_info>
+example: udpplain udp based method
+
+API link:
+To specify an api link, you input the full URL as usual but use placeholders for the URL parameters
+<target> <port> <duration> <method>
+<method> is the <method_name> specified in the methods file and its the one used by the user
+
+C2Name:
+This will change the the prompt e.g. user@c2name
